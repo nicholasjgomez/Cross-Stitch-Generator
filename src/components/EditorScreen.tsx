@@ -74,7 +74,6 @@ const EditorScreen: React.FC<EditorScreenProps> = ({ imageFile, initialState, on
 
   const handleRedo = () => {
     if (canRedo) {
-      // FIX: Redo should increment the history index, not decrement it.
       setHistoryIndex(historyIndex + 1);
     }
   };
@@ -360,7 +359,6 @@ const EditorScreen: React.FC<EditorScreenProps> = ({ imageFile, initialState, on
           const centerX = x * stitchSize + stitchSize / 2;
           const centerY = y * stitchSize + stitchSize / 2;
           if (fillShape === 'circle') {
-            // FIX: Use circleRadius instead of undefined radius
             svgElements += `<circle cx="${centerX}" cy="${centerY}" r="${circleRadius}" fill="${selectedColor.hex}" />`;
           } else { // square
             const rectX = centerX - squareSize / 2;

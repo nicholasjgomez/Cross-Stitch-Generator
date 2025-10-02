@@ -1,0 +1,5 @@
+{
+  "name": "Ver.1 Full Website Wooden Cross-Stitch Pattern Generator",
+  "description": "Upload an image to generate a cross-stitch pattern. The app uses AI to simplify the color palette and allows you to download the final pattern as a PDF.",
+  "requestFramePermissions": []
+}

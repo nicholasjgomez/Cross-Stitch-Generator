@@ -1,7 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-// FIX: Initialize GoogleGenAI with process.env.API_KEY as per coding guidelines.
-// This also resolves the TypeScript error related to `import.meta.env`.
+// FIX: Per coding guidelines, the API key must be read from `process.env.API_KEY`.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
 
 export const getCrossStitchInstructions = async (
@@ -23,7 +22,7 @@ export const getCrossStitchInstructions = async (
 
     1.  **Pattern Details**:
         *   Stitch Count: ${widthInStitches} stitches wide by ${heightInStitches} stitches high.
-        *   Finished Size: Approximately ${widthInInches} inches wide by ${heightInches} inches high when stitched on ${fabricCount}-count Aida fabric. Mention that the size will change if they use a different fabric count.
+        *   Finished Size: Approximately ${widthInInches} inches wide by ${heightInInches} inches high when stitched on ${fabricCount}-count Aida fabric. Mention that the size will change if they use a different fabric count.
 
     2.  **Materials Needed**:
         *   Fabric: Suggest ${fabricCount}-count Aida cloth in a color that contrasts with the thread.
